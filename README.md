@@ -17,14 +17,14 @@ If python is not already installed on your computer, follow the directions found
 1. The program name is `center_of_mouse.py`. You want to run this program with `python3`, so you'll type `python3 center_of_mouse.py` into the terminal.
 
 2. Next, you need to provide the program with arguments to run it on your specific video. The available arguments are:
-  -h, --help            show this help message and exit
-  --video VIDEO         input video for tracking
-  --image_path IMAGE_PATH
+  `-h`, `--help`            show this help message and exit
+  `--video` VIDEO         input video for tracking
+  `--image_path` IMAGE_PATH
                         directory for image export
-  --output OUTPUT       directory for tracked frame export
-  --fps FPS             frame rate for image extraction
+  `--output` OUTPUT       directory for tracked frame export
+  `--fps` FPS             frame rate for image extraction
 
---video is the only required argument. However, I'd recommend setting the fps   to small value as tracking a mouse at the video frame rate (probably 30 frames per second) is excessive.
+`--video` is the only required argument. However, I'd recommend setting the fps   to small value as tracking a mouse at the video frame rate (probably 30 frames per second) is excessive.
 
 In this case, you'll add the video and fps arguments like this:
 `python3 center_of_mouse.py --video {drag and drop your video file into terminal} --fps 1`
