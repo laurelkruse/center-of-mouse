@@ -1,4 +1,4 @@
-# Center of Mouse 🐭 - The home for all your mouse tracking needs 🪤
+# Center of Mouse 🐭 - The home for all your mouse tracking needs 🐁
 ## Installation
 
 ### 1. Download Code:
