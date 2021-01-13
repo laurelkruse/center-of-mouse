@@ -1,14 +1,22 @@
-How to run center_of_mouse.py
+# Center of Mouse 🐭 - The home for all your mouse tracking needs 🪤
+## Installation
 
+### 1. Download Code:
+Download code from github. Click the green code button in the upper right. For easiest results, select `Download ZIP`. Unzip the folder (doubleclick) and place it somewhere accessible.
+
+### 2. Install Python3 🐍
+If python is not already installed on your computer, follow the directions found [here](https://programwithus.com/learn/python/install-python3-mac)
+
+### 3. Install required packages
 1. Navigate to the mouse tracking folder in terminal by using the command
-`cd ` and drag and drop the folder into the terminal window. 
-Alternatively, because you know where the folder is, you can type this into terminal and press enter:
-`cd /Users/laurelkruse/Documents/mouse_tracking`
+`cd ` and drag and drop the folder into the terminal window. Alternatively, because you know where the folder is, you can type this into terminal and press enter
+2. Once you are in your directory, enter `pip3 install -r requirements.txt` and press return. You should see a flurry of activity before the action completes.
 
-2. Run the program. The program name is `center_of_mouse.py`. You want to run this program with `python3`
-So, type `python3 center_of_mouse.py` into the terminal
+## How to run `center_of_mouse.py`
 
-3. Next, you need to provide the program with arguments to run it on your specific video. The available arguments are:
+1. The program name is `center_of_mouse.py`. You want to run this program with `python3`, so you'll type `python3 center_of_mouse.py` into the terminal.
+
+2. Next, you need to provide the program with arguments to run it on your specific video. The available arguments are:
   -h, --help            show this help message and exit
   --video VIDEO         input video for tracking
   --image_path IMAGE_PATH
@@ -21,9 +29,9 @@ So, type `python3 center_of_mouse.py` into the terminal
 In this case, you'll add the video and fps arguments like this:
 `python3 center_of_mouse.py --video {drag and drop your video file into terminal} --fps 1`
 
-4. Your final command should look like this:
-`python3 center_of_mouse.py --video untracked_videos/NEUR\ 369\ F19\ 60\ OF\ 2019-12-06\ 10-17-22\ \(1\).avi --fps 1`
+3. Your final command should look like this:
+`python3 center_of_mouse.py --video example_video/ee_5_short.mp4 --fps 1`
 
-5. The output file should be stored in the directory with the original video. There are two outputs, one is a csv file with the tracked mouse position and quadrant at each tracked frame. The other is a summary of statistics including total distance.
+4. The output file should be stored in the output directory. There are three outputs. One is a csv file with the tracked mouse position and quadrant at each tracked frame. Another is a summary of statistics including total distance. And lastly, it will output a video of the tracked mouse.
 
 Note!!! In order to properly calculate distance, make sure to set the appropriate dimensions in cage_length variable on line 211 in the `center_of_mouse.py` file. If it would be helpful, we can also make this an argument that you pass to the program (e.g. `python3 center_of_mouse.py --video mouse.mp4 --fps 1 --cage_length 36`
