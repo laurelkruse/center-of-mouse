@@ -195,14 +195,15 @@ for file in tqdm(sorted(os.listdir(args.image_path))[2:]):
         plt.savefig(args.output + '/' + file)
         plt.close()
 
-np.savetxt(args.video[:-4] + "_positions.csv", np.array([x,y,[int(val) for val in zone]]).T, delimiter=",", fmt='%.2f', header="x position, y position, zone")
+input_video_name = args.video.split('/')[-1][:-4] + '.mp4'
+np.savetxt(os.path.join(args.output, input_video_name[:-4] + "_positions.csv"), np.array([x,y,[int(val) for val in zone]]).T, delimiter=",", fmt='%.2f', header="x position, y position, zone")
 
 dist = 0
 for x_val, y_val in zip(x, y):
     if x_val == x_val:
         dist += np.sqrt(x_val ** 2 + y_val ** 2)
 
-summary = open("{0}.txt".format(args.video[:-4]),"w")
+summary = open(os.path.join(args.output, "{0}.txt".format(input_video_name[:-4])),"w")
 summary.write("Test {0}\n".format(args.video[:-4]))
 
 ## NOTE!! To change the scale of the enclosure, modify the value below with the
@@ -221,18 +222,17 @@ summary.close()
 
 
 
-video_name = "tracked_mouse_{0}.mp4".format(args.video[:-4])
+video_name = os.path.join(args.output, 'tracked_' + args.video.split('/')[-2] + '_' + args.video.split('/')[-1])
+
 if os.path.exists(video_name):
     os.remove(video_name)
 
-
-
+print(args.output)
 for file in tqdm(sorted(os.listdir(args.output))):
-    if file != '.DS_Store.png':
-        if file != '.DS_Store':
-            img = cv2.imread(args.output + '/' + file)
-            im_width, im_height, im_channels = np.shape(img)
-            img = cv2.resize(img, (int( 2 * round( im_width / 2. )), int( 2 * round( im_height / 2. ))))
-            cv2.imwrite(args.output + '/' + file, img)
-
-os.system("cat {0}/*.png | ffmpeg -f image2pipe -framerate 30 -i - -c:v libx264 -vf format=yuv420p -r 30 tracked_mouse_{1}.mp4".format(args.output, args.video[:-4]))
+    print(file)
+    if '.png' in file:
+        img = cv2.imread(args.output + '/' + file)
+        im_width, im_height, im_channels = np.shape(img)
+        img = cv2.resize(img, (int( 2 * round( im_width / 2. )), int( 2 * round( im_height / 2. ))))
+        cv2.imwrite(args.output + '/' + file, img)
+os.system(f"cat {args.output}/*.png | ffmpeg -f image2pipe -framerate 30 -i - -c:v libx264 -vf format=yuv420p -r 30 {video_name}")
