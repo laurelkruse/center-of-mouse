@@ -10,10 +10,10 @@ Copy and paste `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Hom
 ### 3. Install ffmpeg
 Enter `brew install ffmpeg` and press enter.
 
-### 3. Install Python3 🐍
+### 4. Install Python3 🐍
 If python is not already installed on your computer, follow the directions found [here](https://programwithus.com/learn/python/install-python3-mac)
 
-### 4. Install required packages
+### 5. Install required packages
 1. Navigate to the mouse tracking folder in terminal by using the command
 `cd ` and drag and drop the folder into the terminal window. Alternatively, because you know where the folder is, you can type this into terminal and press enter
 2. Once you are in your directory, enter `pip3 install -r requirements.txt` and press return. You should see a flurry of activity before the action completes.
