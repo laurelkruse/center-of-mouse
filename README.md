@@ -10,8 +10,8 @@ Copy and paste `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Hom
 ### 3. Install ffmpeg
 Enter `brew install ffmpeg` and press enter.
 
-### 4. Install Python3.6 🐍
-Enter `brew install sashkab/python/python@3.6`
+### 4. Install Python 🐍
+Enter `brew install python3`
 
 ### 5. Install required packages
 1. Navigate to the mouse tracking folder in terminal by using the command
