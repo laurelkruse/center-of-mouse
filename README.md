@@ -6,9 +6,12 @@ Download code from github. Click the green code button in the upper right. For e
 
 ### 2. Install Homebrew
 Copy and paste `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"` into your terminal and press enter. It may take a little time to install.
+
 Once you see that Homebrew has been installed you will see a message that says next steps. 
 Once you see this message copy and past this command into terminal `(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)" ') >> /Users/w. zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"`
+
+After this has been installed type `brew help` and click enter. This ensures that the homebrew is accurately installed
 
 ### 3. Install ffmpeg
 Enter `brew install ffmpeg` and press enter.
