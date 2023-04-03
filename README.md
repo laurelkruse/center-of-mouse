@@ -6,12 +6,13 @@ Download code from github. Click the green code button in the upper right. For e
 
 ### 2. Install Homebrew
 Copy and paste `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"` into your terminal and press enter. It may take a little time to install.
+Once 
 
 ### 3. Install ffmpeg
 Enter `brew install ffmpeg` and press enter.
 
 ### 4. Install Python 🐍
-Enter `brew install python3@3.9`
+Enter `brew install python3`
 
 ### 5. Install required packages
 1. Navigate to the mouse tracking folder in terminal by using the command
