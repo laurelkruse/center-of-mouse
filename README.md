@@ -48,7 +48,7 @@ In this case, you'll add the video and fps arguments like this:
 
 Note!!! In order to properly calculate distance, make sure to set the appropriate dimensions in cage_length variable on line 211 in the `center_of_mouse.py` file. If it would be helpful, we can also make this an argument that you pass to the program (e.g. `python3 center_of_mouse.py --video mouse.mp4 --fps 1 --cage_length 36`
 
-## If you exit out of terminal and want to run the program again`
+## If you exit out of terminal and want to run the program again
 Navigate to the mouse tracking folder in terminal by using the command
 `cd ` and drag and drop the folder into the terminal window. 
 Then repeat the steps found in the How to run center_of_mouse.py section
